@@ -1,0 +1,26 @@
+{
+  "name": "livecounting-stats-www2",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rschaosid/livecounting-stats-www2.git"
+  },
+  "author": "rschaosid <rschaosid@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rschaosid/livecounting-stats-www2/issues"
+  },
+  "homepage": "https://github.com/rschaosid/livecounting-stats-www2",
+  "dependencies": {
+    "any-db-promise": "^0.1.0",
+    "express": "^4.7.2",
+    "serve-static": "^1.4.3",
+    "when": "^3.4.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.6",
+    "gulp-jshint": "^1.8.3",
+    "jshint-stylish": "^0.4.0"
+  }
+}
