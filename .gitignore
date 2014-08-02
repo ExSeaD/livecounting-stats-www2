@@ -1,6 +1,7 @@
 node_modules/.bin
 node_modules/any-db-promise
 node_modules/express
+node_modules/express-namespace
 node_modules/gulp
 node_modules/gulp-jshint
 node_modules/jshint-stylish
