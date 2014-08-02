@@ -18,7 +18,7 @@
     <p>(The counting is live, not the stats)</p>
     <h2>&quot;K&quot; gets</h2>
     <table>
-     <tr ng-repeat="get in kgets"><td><a href="{{get.permalink}}" ng-bind="get.value"></a></td><td ng-bind="get.author"></td></tr>
+     <tr ng-repeat="get in kgets"><td ng-bind="get.value"></td><td ng-bind="get.author"></td></tr>
     </table>
     <h2>Participants</h2>
     <table>
@@ -26,7 +26,7 @@
       <tr><th>user</th><th># of counts</th></tr>
      </thead>
      <tbody>
-      <tr ng-repeat="contributor in contributors"><td ng-bind="contributor.username"></td><td class="contrib-count" ng-bind="contributor.contribution_count"></td></tr>
+      <tr ng-repeat="contributor in contributors"><td ng-bind="contributor.author"></td><td class="contrib-count" ng-bind="contributor.contribution_count"></td></tr>
      </tbody>
     </table>
   </body>
