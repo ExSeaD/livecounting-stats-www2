@@ -17,6 +17,7 @@
     "express": "^4.7.2",
     "express-namespace": "^0.1.1",
     "serve-static": "^1.4.3",
+    "sonya": "0.0.13",
     "when": "^3.4.2"
   },
   "devDependencies": {

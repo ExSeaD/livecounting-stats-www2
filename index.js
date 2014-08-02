@@ -1,14 +1,27 @@
+var sonya = require('sonya');
+var inject = sonya.Injector.invoke.bind(sonya.Injector);
+
 var http = require('http');
 var express = require('express');
+
+// provides app.namespace
 require('express-namespace');
-var serveStatic = require('serve-static');
 
-var api = require('./lib/api.js');
+// DI modules
+require('./lib/static.js');
+require('./lib/api.js');
+require('./lib/db.js');
+require('./lib/cfg.js');
 
-var app = express();
-
-app.use(serveStatic('public'));
-
-app.namespace('/api', api(app));
-
-http.createServer(app).listen(process.env.HTTP_PORT);
+// main
+inject(function(static, api, cfg) {
+  var app = express();
+  
+  app.use(static);
+  app.namespace('/api', function() {
+    app.get('/kgets.json', api.get.kgets);
+    app.get('/contributors.json', api.get.contributors);
+  });
+  
+  http.createServer(app).listen(cfg.httpPort);
+});
