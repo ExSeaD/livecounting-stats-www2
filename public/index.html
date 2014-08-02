@@ -1,8 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <title>livecounting-stats-www2</title>
-  <body>
-    <h1>livecounting-stats-www2</h1>
-    <p>livecounting-stats-www2</p>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
+    
+    <script src="app.js"></script>
+    <script src="config.js"></script>
+    <script src="controllers/StatController.js"></script>
+    
+    <link rel="stylesheet" href="stylesheets/style.css"></link>
+    
+    <title>Live Counting Stats</title>
+  </head>
+  <body ng-app="livecounting-stats-www2" ng-controller="StatController">
+    <h1>Live Counting Stats</h1>
+    <p>(The counting is live, not the stats)</p>
+    <h2>&quot;K&quot; gets</h2>
+    <table>
+     <tr ng-repeat="get in kgets"><td><a href="{{get.permalink}}" ng-bind="get.value"></a></td><td ng-bind="get.author"></td></tr>
+    </table>
+    <h2>Participants</h2>
+    <table>
+     <thead>
+      <tr><th>user</th><th># of counts</th></tr>
+     </thead>
+     <tbody>
+      <tr ng-repeat="contributor in contributors"><td ng-bind="contributor.username"></td><td class="contrib-count" ng-bind="contributor.contribution_count"></td></tr>
+     </tbody>
+    </table>
   </body>
 </html>
