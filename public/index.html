@@ -31,5 +31,13 @@
       <tr ng-repeat="contributor in contributors"><td ng-bind="contributor.author"></td><td class="contrib-count" ng-bind="contributor.contribution_count"></td></tr>
      </tbody>
     </table>
+    <h2>Punchcard</h2>
+    <table>
+      <caption>contributions per user per hour in the last day</caption>
+      <tr ng-repeat="contributor in punchcard">
+        <td ng-bind="contributor.author"></td>
+        <td ng-repeat="hour_contribution_count in contributor.hour_contribution_counts track by $index" ng-bind="hour_contribution_count"></td>
+      </tr>
+    </table>
   </body>
 </html>
