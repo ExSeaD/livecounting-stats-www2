@@ -8,6 +8,10 @@ angular.module('livecounting-stats-www2')
     getContributors: function() {
       return $http.get('api/contributors.json')
       .then(function(response) { return response.data; });
+    },
+    getPunchcard: function() {
+      return $http.get('api/punchcard.json')
+      .then(function(response) { return response.data; });
     }
   };
 }]);

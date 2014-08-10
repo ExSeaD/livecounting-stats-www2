@@ -21,6 +21,7 @@ inject(function(static, api, cfg) {
   app.namespace('/api', function() {
     app.get('/kgets.json', api.get.kgets);
     app.get('/contributors.json', api.get.contributors);
+    app.get('/punchcard.json', api.get.punchcard);
   });
   
   http.createServer(app).listen(cfg.httpPort);
