@@ -6,16 +6,18 @@
     
     <script src="app.js"></script>
     <script src="config.js"></script>
+    
     <script src="controllers/StatController.js"></script>
+    <script src="directives/punchcard-graph/punchcard-graph.js"></script>
     <script src="services/StatsApi.js"></script>
     
     <link rel="stylesheet" href="stylesheets/style.css"></link>
     
-    <title>Live Counting Stats</title>
+    <title>Live Counting Statistics</title>
   </head>
   <body ng-app="livecounting-stats-www2" ng-controller="StatController">
-    <h1>Live Counting Stats</h1>
-    <p>(The counting is live, not the stats)</p>
+    <h1>Live Counting Statistics</h1>
+    <p>(The counting is live, not the statistics)</p>
     <h2>&quot;K&quot; gets</h2>
     <table>
      <tr ng-repeat="get in kgets"><td ng-bind="get.value"></td><td ng-bind="get.author"></td></tr>
@@ -29,13 +31,7 @@
       <tr ng-repeat="contributor in contributors"><td ng-bind="contributor.author"></td><td class="contrib-count" ng-bind="contributor.contribution_count"></td></tr>
      </tbody>
     </table>
-    <h2>Punchcard</h2>
-    <table>
-      <caption>contributions per user per hour in the last day</caption>
-      <tr ng-repeat="contributor in punchcard">
-        <td ng-bind="contributor.author"></td>
-        <td ng-repeat="hour_contribution_count in contributor.hour_contribution_counts track by $index" ng-bind="hour_contribution_count"></td>
-      </tr>
-    </table>
+    <h2>Contribution breakdown</h2>
+    <punchcard-graph data="punchcard"></punchcard-graph>
   </body>
 </html>

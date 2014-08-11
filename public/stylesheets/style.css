@@ -6,6 +6,11 @@ h1 {
   background-color: #F0F0F0;
   text-align: center;
 }
+
+h2 {
+  border-bottom: 1px solid #C0C0C0;
+}
+
 table {
   border-collapse: collapse;
 }
@@ -18,4 +23,71 @@ th {
 }
 td.contrib-count {
   text-align: right;
+}
+punchcard-graph svg {
+  width: 48rem;
+}
+
+punchcard-graph {
+  position: relative;
+}
+punchcard-graph ul.graph-labels {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  list-style: none;
+}
+
+punchcard-graph svg {
+  border-bottom: 1px solid #C0C0C0;
+}
+
+punchcard-graph svg polygon.graph-line:nth-child(8n+1) {
+  fill: #F2B701;
+}
+punchcard-graph svg polygon.graph-line:nth-child(8n+2) {
+  fill: #E57D04;
+}
+punchcard-graph svg polygon.graph-line:nth-child(8n+3) {
+  fill: #DC0030;
+}
+punchcard-graph svg polygon.graph-line:nth-child(8n+4) {
+  fill: #B10058;
+}
+punchcard-graph svg polygon.graph-line:nth-child(8n+5) {
+  fill: #7C378A;
+}
+punchcard-graph svg polygon.graph-line:nth-child(8n+6) {
+  fill: #3465AA;
+}
+punchcard-graph svg polygon.graph-line:nth-child(8n+7) {
+  fill: #09A275;
+}
+punchcard-graph svg polygon.graph-line:nth-child(8n) {
+  fill: #7CB854;
+}
+
+punchcard-graph ul.graph-labels li:nth-child(8n+1) {
+  color: #F2B701;
+}
+punchcard-graph ul.graph-labels li:nth-child(8n+2) {
+  color: #E57D04;
+}
+punchcard-graph ul.graph-labels li:nth-child(8n+3) {
+  color: #DC0030;
+}
+punchcard-graph ul.graph-labels li:nth-child(8n+4) {
+  color: #B10058;
+}
+punchcard-graph ul.graph-labels li:nth-child(8n+5) {
+  color: #7C378A;
+}
+punchcard-graph ul.graph-labels li:nth-child(8n+6) {
+  color: #3465AA;
+}
+punchcard-graph ul.graph-labels li:nth-child(8n+7) {
+  color: #09A275;
+}
+punchcard-graph ul.graph-labels li:nth-child(8n) {
+  color: #7CB854;
 }
