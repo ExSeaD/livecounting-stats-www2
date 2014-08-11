@@ -12,11 +12,10 @@ angular.module('livecounting-stats-www2')
       slice(el_svg.querySelectorAll('polygon.graph-line')).forEach(HTMLElement.prototype.removeChild.bind(el_svg));
       var crest = null;
       var xstep = 25;
-      var width = xstep*(data[0] ? data[0].hour_contribution_counts.length : 0);
+      var width = xstep*(data[0] ? data[0].hour_contribution_counts.length-1 : 0);
       for (var i=0;i<data.length;i++) {
         var el_line = document.createElementNS(SVGNS, 'polygon');
         el_line.classList.add('graph-line');
-        console.log(data[i].hour_contribution_counts);
         crest = (crest ? data[i].hour_contribution_counts.map(function(e,i) {
           return e+crest[i];
         }) : data[i].hour_contribution_counts);

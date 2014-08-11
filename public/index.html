@@ -12,26 +12,17 @@
     <script src="services/StatsApi.js"></script>
     
     <link rel="stylesheet" href="stylesheets/style.css"></link>
+    <link rel="stylesheet" href="directives/punchcard-graph/punchcard-graph.css"></link>
     
     <title>Live Counting Statistics</title>
   </head>
-  <body ng-app="livecounting-stats-www2" ng-controller="StatController">
+  <body ng-app="livecounting-stats-www2">
     <h1>Live Counting Statistics</h1>
-    <p>(The counting is live, not the statistics)</p>
-    <h2>&quot;K&quot; gets</h2>
-    <table>
-     <tr ng-repeat="get in kgets"><td ng-bind="get.value"></td><td ng-bind="get.author"></td></tr>
-    </table>
-    <h2>Participants</h2>
-    <table>
-     <thead>
-      <tr><th>user</th><th># of counts</th></tr>
-     </thead>
-     <tbody>
-      <tr ng-repeat="contributor in contributors"><td ng-bind="contributor.author"></td><td class="contrib-count" ng-bind="contributor.contribution_count"></td></tr>
-     </tbody>
-    </table>
-    <h2>Contribution breakdown</h2>
-    <punchcard-graph data="punchcard"></punchcard-graph>
+    <ul class="navbar">
+      <li><a ui-sref="kgets" ui-sref-active="nav-active">Ks</a></li>
+      <li><a ui-sref="contributors" ui-sref-active="nav-active">Participants</a></li>
+      <li><a ui-sref="punchcard" ui-sref-active="nav-active">Recent Contributions</a></li>
+    </ul>
+    <ui-view></ui-view>
   </body>
 </html>

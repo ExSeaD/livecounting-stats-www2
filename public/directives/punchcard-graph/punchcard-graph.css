@@ -1,0 +1,57 @@
+punchcard-graph {
+  position: relative;
+}
+punchcard-graph ul.graph-labels {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  list-style: none;
+}
+
+punchcard-graph svg {
+  border-bottom: 1px solid #C0C0C0;
+}
+
+punchcard-graph svg polygon.graph-line:nth-child(7n+1) {
+  fill: #7CB854;
+}
+punchcard-graph svg polygon.graph-line:nth-child(7n+2) {
+  fill: #09A275;
+}
+punchcard-graph svg polygon.graph-line:nth-child(7n+3) {
+  fill: #3465AA;
+}
+punchcard-graph svg polygon.graph-line:nth-child(7n+4) {
+  fill: #7C378A;
+}
+punchcard-graph svg polygon.graph-line:nth-child(7n+5) {
+  fill: #DC0030;
+}
+punchcard-graph svg polygon.graph-line:nth-child(7n+6) {
+  fill: #E57D04;
+}
+punchcard-graph svg polygon.graph-line:nth-child(7n) {
+  fill: #F2B701;
+}
+
+punchcard-graph ul.graph-labels li:nth-child(7n+1) {
+  color: #7CB854;
+}
+punchcard-graph ul.graph-labels li:nth-child(7n+2) {
+  color: #09A275;
+}
+punchcard-graph ul.graph-labels li:nth-child(7n+3) {
+  color: #3465AA;
+}
+punchcard-graph ul.graph-labels li:nth-child(7n+4) {
+  color: #7C378A;
+}
+punchcard-graph ul.graph-labels li:nth-child(7n+5) {
+  color: #DC0030;
+}
+punchcard-graph ul.graph-labels li:nth-child(7n+6) {
+  color: #E57D04;
+}
+punchcard-graph ul.graph-labels li:nth-child(7n) {
+  color: #F2B701;
+}
