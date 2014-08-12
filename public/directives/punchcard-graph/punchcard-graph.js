@@ -11,13 +11,13 @@ angular.module('livecounting-stats-www2')
       scope.labels = slice(data).reverse().map(function(e) { return { author: e.author }; });
       slice(el_svg.querySelectorAll('polygon.graph-line')).forEach(HTMLElement.prototype.removeChild.bind(el_svg));
       var crest = null;
-      var xstep = 5;
+      var xstep = 20, ystep = .25;
       var width = xstep*(data[0] ? data[0].hour_contribution_counts.length-1 : 0);
       function addCrest(e, i) {
         return e+crest[i];
       }
       function toSvgPoint(e, i) {
-        return [xstep*i,-e].join(',');
+        return [xstep*i,-ystep*e].join(',');
       }
       for (var i=0;i<data.length;i++) {
         var el_line = document.createElementNS(SVGNS, 'polygon');
@@ -26,7 +26,7 @@ angular.module('livecounting-stats-www2')
         el_line.setAttribute('points', crest.map(toSvgPoint).concat([[width,0].join(','),[0,0].join(',')]).join(' '));
         el_svg.insertBefore(el_line, el_svg.firstChild);
       }
-      var height = Math.max.apply(undefined, crest || [0]);
+      var height = ystep*Math.max.apply(undefined, crest || [0]);
       el_svg.setAttribute('viewBox', [0, -height, width, height].join(' '));
       el_svg.setAttribute('width', width);
       el_svg.setAttribute('height', height);
