@@ -1,6 +1,15 @@
 <div ng-controller="StatController">
   <h2>&quot;K&quot; gets</h2>
   <table>
-    <tr ng-repeat="get in kgets"><td ng-bind="get.value"></td><td ng-bind="get.author"></td></tr>
+    <tr>
+      <th>get</th>
+      <th>getter</th>
+      <th>running time</th>
+    </tr>
+    <tr ng-repeat="get in kgets">
+      <td ng-bind="get.value"></td>
+      <td ng-bind="get.author"></td>
+      <td ng-bind="get.running_time | interval"></td>
+    </tr>
   </table>
 </div>
