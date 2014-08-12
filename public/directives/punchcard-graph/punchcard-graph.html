@@ -1,4 +1,4 @@
 <ul class="graph-labels">
-  <li ng-repeat="contributor in labels" ng-bind="contributor.author"></li>
+  <li ng-repeat="contributor in labels"><reddit-user username="contributor.author"></reddit-user></li>
 </ul>
 <svg></svg>

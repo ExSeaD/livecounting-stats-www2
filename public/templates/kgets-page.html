@@ -8,7 +8,7 @@
     </tr>
     <tr ng-repeat="get in kgets">
       <td ng-bind="get.value"></td>
-      <td ng-bind="get.author"></td>
+      <td><reddit-user username="get.author"></reddit-user></td>
       <td ng-bind="get.running_time | interval"></td>
     </tr>
   </table>
