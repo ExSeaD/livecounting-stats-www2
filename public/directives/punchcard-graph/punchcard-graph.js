@@ -11,7 +11,7 @@ angular.module('livecounting-stats-www2')
       scope.labels = slice(data).reverse().map(function(e) { return { author: e.author }; });
       slice(el_svg.querySelectorAll('polygon.graph-line')).forEach(HTMLElement.prototype.removeChild.bind(el_svg));
       var crest = null;
-      var xstep = 25;
+      var xstep = 5;
       var width = xstep*(data[0] ? data[0].hour_contribution_counts.length-1 : 0);
       for (var i=0;i<data.length;i++) {
         var el_line = document.createElementNS(SVGNS, 'polygon');
