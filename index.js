@@ -20,7 +20,8 @@ inject(function(static, api, cfg) {
   app.use(static);
   app.namespace('/api', function() {
     app.get('/kgets.json', api.get.kgets);
-    app.get('/contributors.json', api.get.contributors);
+    app.get('/kgetters.json', api.get.kgetters);
+    app.get('/participants.json', api.get.participants);
     app.get('/punchcard.json', api.get.punchcard);
   });
   

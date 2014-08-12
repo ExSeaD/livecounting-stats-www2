@@ -1,0 +1,11 @@
+<div ng-controller="StatController">
+  <h2>participants</h2>
+  <table>
+    <thead>
+      <tr><th>user</th><th># of counts</th></tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="contributor in participants"><td ng-bind="contributor.author"></td><td class="contrib-count" ng-bind="contributor.contribution_count"></td></tr>
+    </tbody>
+  </table>
+</div>

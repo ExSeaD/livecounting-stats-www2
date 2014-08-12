@@ -7,8 +7,10 @@ angular.module('livecounting-stats-www2')
   function fetch() {
     $http.get('api/kgets.json')
     .then(function(response) { ret.kgets = response.data; });
-    $http.get('api/contributors.json')
-    .then(function(response) { ret.contributors = response.data; });
+    $http.get('api/kgetters.json')
+    .then(function(response) { ret.kgetters = response.data; });
+    $http.get('api/participants.json')
+    .then(function(response) { ret.participants = response.data; });
     $http.get('api/punchcard.json')
     .then(function(response) { ret.punchcard = response.data; });
   }

@@ -1,0 +1,11 @@
+<div ng-controller="StatController">
+  <h2>getters</h2>
+  <table>
+    <thead>
+      <tr><th>user</th><th># of gets</th></tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="contributor in kgetters"><td ng-bind="contributor.author"></td><td class="contrib-count" ng-bind="contributor.kget_count"></td></tr>
+    </tbody>
+  </table>
+</div>
