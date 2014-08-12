@@ -42,3 +42,18 @@ th {
 td.contrib-count {
   text-align: right;
 }
+
+.graph-labels a {
+  color: inherit;
+}
+
+a {
+  text-decoration: inherit;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+span.username-prefix {
+  opacity: 0.5;
+}
