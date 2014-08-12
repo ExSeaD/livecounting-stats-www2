@@ -6,5 +6,5 @@ angular.module('livecounting-stats-www2')
       'username': '=username'
     },
     template: '<a href="https://www.reddit.com/u/{{username}}">/u/{{username}}</a>'
-  }
+  };
 }]);

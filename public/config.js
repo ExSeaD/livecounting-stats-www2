@@ -19,8 +19,8 @@ angular.module('livecounting-stats-www2')
   });
   
   $stateProvider.state('punchcard', {
-    url: '/breakdown',
+    url: '/activity',
     templateUrl: 'templates/punchcard-page.html'
   });
   
-}])
+}]);
