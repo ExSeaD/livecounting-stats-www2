@@ -1,3 +1,38 @@
-h1 {
-  color: red;
+h1, div.news-container, div.main-container>*, footer {
+  border: 1px dashed red;
+  box-sizing: border-box;
+}
+
+h1, footer {
+  padding: 0.2rem;
+  margin: 0.5rem 0;
+}
+
+div.page-container {
+  max-width: 80rem;
+  margin: auto;
+}
+
+div.body-container {
+  display: flex;
+}
+
+div.main-container {
+  order: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.news-container {
+  order: 2;
+  flex-shrink: 0;
+  width: 20rem;
+  padding: 0.2rem;
+}
+
+div.main-container>* {
+  width: 30rem;
+  height: 30rem;
+  overflow: auto;
+  padding: 0.2rem;
 }
