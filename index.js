@@ -23,6 +23,8 @@ inject(function(static, api, cfg) {
     app.get('/kgetters.json', api.get.kgetters);
     app.get('/participants.json', api.get.participants);
     app.get('/punchcard.json', api.get.punchcard);
+    
+    app.get('/misc/render-activity-graph.svg', api.get.renderActivityGraph);
   });
   
   http.createServer(app).listen(cfg.httpPort);
